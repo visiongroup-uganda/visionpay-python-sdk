@@ -30,11 +30,6 @@ To view all test environments
 ```sh
 $ tox -l  
 ``` 
-To run the tests for Python 2.7  
-
-```sh
-$ tox -e py27-cover 
-```
 
 To run the tests for Python 3.4
 

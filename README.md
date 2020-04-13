@@ -25,7 +25,7 @@ Add the latest version of the library to your project using pip:
  $ pip install payhere-sdk
 ```
 
-This library supports Python 2.7+ or Python 3.4+ (PyPy supported)
+This library supports Python 3.4+ (PyPy supported)
 
 # Account details
 
