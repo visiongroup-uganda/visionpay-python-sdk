@@ -33,8 +33,8 @@ setup(
         re.sub(':[a-z]+:`~?(.*?)`', r'``\1``', read('CHANGELOG.md'))
     ),
     long_description_content_type='text/markdown',
-    author='Sparkplug',
-    author_email='mugisha@sparkpl.ug',
+    author='Riley Digital Services',
+    author_email='acellam.guy@gmail.com',
     url='https://github.com/rileydigitalservices/payhere-python-sdk',
     packages=find_packages('src'),
     package_dir={'': 'src'},
