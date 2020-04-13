@@ -1,4 +1,4 @@
-# Payhere API Python Client</h1>
+# Payhere API Python SDK</h1>
 
 <strong>Payment gateway for african businesses</strong>
 
@@ -39,7 +39,7 @@ The redentials in the sandbox environment can be used straight away. In producti
 
 Before we can fully utilize the library, we need to specify global configurations. The global configuration must contain the following:
 
-* `PAYHERE_BASE_URL`: An optional base url to the MTN Momo API. By default the staging base url will be used
+* `PAYHERE_BASE_URL`: An optional base url to Payhere API. By default the staging base url will be used
 * `PAYHERE_ENVIRONMENT`: Optional enviroment, either "sandbox" or "production". Default is 'sandbox'
 * `PAYHERE_APP_ID`: The unique application identity for your app
 * `PAYHERE_USERNAME`: Username used for authentication

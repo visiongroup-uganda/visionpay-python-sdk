@@ -1,6 +1,6 @@
 # Contributing
 
-First off, thank you for considering contributing to this Python MTN MoMo Library. It's people like you that make it such a great tool. Contributions are welcome, and they are greatly appreciated!
+First off, thank you for considering contributing to this Python Payhere Library. It's people like you that make it such a great tool. Contributions are welcome, and they are greatly appreciated!
 
 ## Where do I go from here?
 
