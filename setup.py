@@ -24,7 +24,7 @@ def read(*names, **kwargs):
 
 
 setup(
-    name='payhere',
+    name='payhere-sdk',
     version='3.0.1',
     license='MIT license',
     description='Python wrapper for the Riley Digital Services Payhere API.',
