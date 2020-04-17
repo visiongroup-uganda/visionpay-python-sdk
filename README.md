@@ -1,17 +1,17 @@
-# Payhere API Python SDK</h1>
+# Visionpay API Python SDK</h1>
 
 <strong>Payment gateway for african businesses</strong>
 
 <div>
   Join our active, engaged community: <br>
-  <a href="https://spectrum.chat/payhere-api-sdk/">Spectrum</a>
+  <a href="https://spectrum.chat/visionpay-api-sdk/">Spectrum</a>
   <br><br>
 </div>
 
 
-[![Build Status](https://travis-ci.com/rileydigitalservices/payhere-python-sdk.svg?branch=master)](https://travis-ci.com/rileydigitalservices/payhere-python-sdk)
-[![Latest Version](https://img.shields.io/pypi/v/tox-travis.svg)](https://badge.fury.io/js/payhere-python-sdk)
-[![Coverage Status](https://coveralls.io/repos/github/rileydigitalservices/payhere-python-sdk/badge.svg?branch=master)](https://coveralls.io/github/rileydigitalservices/payhere-python-sdk?branch=master)
+[![Build Status](https://travis-ci.org/visiongroup-uganda/visionpay-python-sdk.svg?branch=master)](https://travis-ci.org/visiongroup-uganda/visionpay-python-sdk)
+[![Latest Version](https://img.shields.io/pypi/v/tox-travis.svg)](https://badge.fury.io/js/visionpay-python-sdk)
+[![Coverage Status](https://coveralls.io/repos/github/visiongroup-uganda/visionpay-python-sdk/badge.svg?branch=master)](https://coveralls.io/github/visiongroup-uganda/visionpay-python-sdk?branch=master)
 [![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/momo-api-developers/)
 
 
@@ -22,16 +22,16 @@
 Add the latest version of the library to your project using pip:
 
 ```bash
- $ pip install payhere-sdk
+ $ pip install visionpay-sdk
 ```
 
 This library supports Python 3.4+ (PyPy supported)
 
 # Account details
 
-## Getting environment API user 
+## Getting environment API user
 
-Next, we need to get the `APP-ID`, `username` and `password` for use in the product. You can get these details from `https://dashboard.payhere.africa/register`.
+Next, we need to get the `APP-ID`, `username` and `password` for use in the product. You can get these details from `https://dashboard.visionpay.ug/register`.
 
 The redentials in the sandbox environment can be used straight away. In production, the credentials are provided for you after KYC requirements are met.
 
@@ -39,21 +39,21 @@ The redentials in the sandbox environment can be used straight away. In producti
 
 Before we can fully utilize the library, we need to specify global configurations. The global configuration must contain the following:
 
-* `PAYHERE_BASE_URL`: An optional base url to Payhere API. By default the staging base url will be used
-* `PAYHERE_ENVIRONMENT`: Optional enviroment, either "sandbox" or "production". Default is 'sandbox'
-* `PAYHERE_APP_ID`: The unique application identity for your app
-* `PAYHERE_USERNAME`: Username used for authentication
-* `PAYHERE_PASSWORD`: Password used for authentication
+* `VISIONPAY_BASE_URL`: An optional base url to Visionpay API. By default the staging base url will be used
+* `VISIONPAY_ENVIRONMENT`: Optional enviroment, either "sandbox" or "production". Default is 'sandbox'
+* `VISIONPAY_APP_ID`: The unique application identity for your app
+* `VISIONPAY_USERNAME`: Username used for authentication
+* `VISIONPAY_PASSWORD`: Password used for authentication
 
 The full list of configuration options can be seen in the example below:
 
  ```python
  config = {
-    "PAYHERE_ENVIRONMENT": os.environ.get("PAYHERE_ENVIRONMENT"), 
-    "PAYHERE_BASE_URL": os.environ.get("PAYHERE_BASE_URL"), 
-    "PAYHERE_APP_ID": os.environ.get("PAYHERE_APP_ID"),
-    "PAYHERE_USERNAME": os.environ.get("PAYHERE_USERNAME"), 
-    "PAYHERE_PASSWORD": os.environ.get("PAYHERE_PASSWORD"),
+    "VISIONPAY_ENVIRONMENT": os.environ.get("VISIONPAY_ENVIRONMENT"),
+    "VISIONPAY_BASE_URL": os.environ.get("VISIONPAY_BASE_URL"),
+    "VISIONPAY_APP_ID": os.environ.get("VISIONPAY_APP_ID"),
+    "VISIONPAY_USERNAME": os.environ.get("VISIONPAY_USERNAME"),
+    "VISIONPAY_PASSWORD": os.environ.get("VISIONPAY_PASSWORD"),
 }
 ```
 
@@ -64,7 +64,7 @@ You can create a inpayments client with the following:
 
 ```python
 import os
-from payhere.inpayments import Inpayments
+from visionpay.inpayments import Inpayments
 
 client = Inpayments()
 ```
@@ -73,13 +73,13 @@ client = Inpayments()
 
 1. `requestToPay`: This operation is used to request a payment from a consumer (Payer). The payer will be asked to authorize the payment. The transaction is executed once the payer has authorized the payment. The transaction will be in status PENDING until it is authorized or declined by the payer or it is timed out by the system. Status of the transaction can be validated by using `getTransactionStatus`.
 
-2. `getTransaction`: Retrieve transaction information using the `transactionId` returned by `requestToPay`. You can invoke it at intervals until the transaction fails or succeeds. If the transaction has failed, it will throw an appropriate error. 
+2. `getTransaction`: Retrieve transaction information using the `transactionId` returned by `requestToPay`. You can invoke it at intervals until the transaction fails or succeeds. If the transaction has failed, it will throw an appropriate error.
 
 ### Sample Code
 
 ```python
 import os
-from payhere.inpayments import Inpayments
+from visionpay.inpayments import Inpayments
 
 client = Inpayments()
 
@@ -95,7 +95,7 @@ You can create a outpayments client with the following
 
 ```python
 import os
-from payhere.outpayments import Outpayments
+from visionpay.outpayments import Outpayments
 
 client = Outpayments()
 ```
@@ -110,7 +110,7 @@ client = Outpayments()
 
 ```python
 import os
-from payhere.outpayments import Outpayments
+from visionpay.outpayments import Outpayments
 
 client = Outpayments()
 

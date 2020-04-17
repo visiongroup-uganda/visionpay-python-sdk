@@ -8,9 +8,9 @@ except ImportError:
 from requests import Request, Session
 
 from .utils import mocked_requests_get, mocked_requests_post, mocked_requests_session
-from payhere.errors import ValidationError
-from payhere.client import Payhere
-from payhere.outpayments import Outpayments
+from visionpay.errors import ValidationError
+from visionpay.client import Visionpay
+from visionpay.outpayments import Outpayments
 
 
 class TestOutpayments(unittest.TestCase):
@@ -18,9 +18,9 @@ class TestOutpayments(unittest.TestCase):
     @mock.patch('requests.post', side_effect=mocked_requests_post)
     def setUp(self, mock_get):
         self.config = {
-            "PAYHERE_APP_ID": "110000",
-            "PAYHERE_USERNAME": "sdk",
-            "PAYHERE_PASSWORD": "sdk@2020"
+            "VISIONPAY_APP_ID": "110000",
+            "VISIONPAY_USERNAME": "sdk",
+            "VISIONPAY_PASSWORD": "sdk@2020"
         }
         client = Outpayments(self.config)
         self.client = client
@@ -48,7 +48,7 @@ class TestOutpayments(unittest.TestCase):
         with self.assertRaises(ValidationError):
             ref = self.client.transfer(amount="600", mobile="256712123456", processing_number="123456789", narration="dd")
 
-    @mock.patch.object(Payhere, "request", side_effect=mocked_requests_session)
+    @mock.patch.object(Visionpay, "request", side_effect=mocked_requests_session)
     def test_transfer(self, mock_get):
 
         ref = self.client.transfer(amount="600", mobile="256772123456", processing_number="123456789", narration="dd")
@@ -56,7 +56,7 @@ class TestOutpayments(unittest.TestCase):
         assert isinstance(ref, dict)
         assert "processing_number" in ref.keys()
 
-    @mock.patch.object(Payhere, "request", side_effect=mocked_requests_session)
+    @mock.patch.object(Visionpay, "request", side_effect=mocked_requests_session)
     def test_get_transaction_status(self, mock_get):
         status = self.client.getTransactionStatus("dummy")
         assert isinstance(status, dict)

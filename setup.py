@@ -24,18 +24,18 @@ def read(*names, **kwargs):
 
 
 setup(
-    name='payhere-sdk',
+    name='visionpay-sdk',
     version='3.0.1',
     license='MIT license',
-    description='Python wrapper for the Riley Digital Services Payhere API.',
+    description='Python wrapper for the Vision Group Visionpay API.',
     long_description='%s\n%s' % (
         re.compile('^.. start-badges.*^.. end-badges', re.M | re.S).sub('', read('README.md')),
         re.sub(':[a-z]+:`~?(.*?)`', r'``\1``', read('CHANGELOG.md'))
     ),
     long_description_content_type='text/markdown',
-    author='Riley Digital Services',
+    author='Vision Group Uganda',
     author_email='acellam.guy@gmail.com',
-    url='https://github.com/rileydigitalservices/payhere-python-sdk',
+    url='https://github.com/visiongroup-uganda/visionpay-python-sdk',
     packages=find_packages('src'),
     package_dir={'': 'src'},
     py_modules=[splitext(basename(path))[0] for path in glob('src/*.py')],
@@ -60,7 +60,7 @@ setup(
         'Topic :: Utilities',
     ],
     keywords=[
-        'MoMo API', 'MoMo API Python Wrapper','MoMo API Python', 'Payhere API'
+        'Mobile Money', 'Visionpay API Python Wrapper','Visionpay API Python', 'Visionpay API'
     ],
     install_requires=[
         'requests == 2.21.0',
@@ -83,7 +83,7 @@ setup(
                              'pytest-bdd'], "dev": ["semver"]},
     entry_points={
         'console_scripts': [
-            'payhere = payhere.cli:main',
+            'visionpay = visionpay.cli:main',
         ]
     },
 )

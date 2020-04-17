@@ -1,19 +1,19 @@
 # Contributing
 
-First off, thank you for considering contributing to this Python Payhere Library. It's people like you that make it such a great tool. Contributions are welcome, and they are greatly appreciated!
+First off, thank you for considering contributing to this Python Visionpay Library. It's people like you that make it such a great tool. Contributions are welcome, and they are greatly appreciated!
 
 ## Where do I go from here?
 
 If you've noticed a bug or have a question that doesn't belong on the
-[Spectrum](https://spectrum.chat/payhere-api-sdk/) or [Stack Overflow](https://stackoverflow.com/), [search the issue tracker](https://github.com/rileydigitalservices/payhere-python-sdk/issues) to see if
+[Spectrum](https://spectrum.chat/visionpay-api-sdk/) or [Stack Overflow](https://stackoverflow.com/), [search the issue tracker](https://github.com/visiongroup-uganda/visionpay-python-sdk/issues) to see if
 someone else in the community has already created a ticket. If not, go ahead and
-[make one](https://github.com/rileydigitalservices/payhere-python-sdk/issues/new/choose)! 
+[make one](https://github.com/visiongroup-uganda/visionpay-python-sdk/issues/new/choose)!
 
 
 
 ## Fork & create a branch
 
-If there is something you think you can fix, then fork the [repo](https://github.com/rileydigitalservices/payhere-python-sdk) and create a branch with a descriptive name.
+If there is something you think you can fix, then fork the [repo](https://github.com/visiongroup-uganda/visionpay-python-sdk) and create a branch with a descriptive name.
 
 A good branch name would be (where issue #32 is the ticket you're working on):
 
@@ -28,14 +28,14 @@ This library has a comprehensive test suite, which can be run using the `tox` co
 To view all test environments
 
 ```sh
-$ tox -l  
-``` 
+$ tox -l
+```
 
 To run the tests for Python 3.4
 
 ```sh
-$ tox -e py34-cover 
-``` 
+$ tox -e py34-cover
+```
 
 To run a subset of tests::
 
@@ -53,10 +53,10 @@ detox
 
 ### Did you find a bug?
 
-* **Ensure the bug was not already reported** by [searching all issues](https://github.com/rileydigitalservices/payhere-python-sdk/issues).
+* **Ensure the bug was not already reported** by [searching all issues](https://github.com/visiongroup-uganda/visionpay-python-sdk/issues).
 
 * If you're unable to find an open issue addressing the problem,
-  [open a new one](https://github.com/rileydigitalservices/payhere-python-sdk/issues/new/choose). Be sure to include a **title and clear
+  [open a new one](https://github.com/visiongroup-uganda/visionpay-python-sdk/issues/new/choose). Be sure to include a **title and clear
   description**, as much relevant information as possible, and a **code sample**
   or an **executable test case** demonstrating the expected behavior that is not
   occurring.
@@ -76,7 +76,7 @@ If you are proposing a feature:
 * Keep the scope as narrow as possible, to make it easier to implement.
 * Remember that this is a volunteer-driven project, and that code contributions are welcome :)
 
-If you would like to send us feedback, simply [file an issue](https://github.com/rileydigitalservices/payhere-python-sdk/issues/new/choose).
+If you would like to send us feedback, simply [file an issue](https://github.com/visiongroup-uganda/visionpay-python-sdk/issues/new/choose).
 
 ## Local Development
 
@@ -86,7 +86,7 @@ To set up `python-sdk` for local development:
 2. Clone your fork locally:
 
 ```sh
-git clone https://github.com/your_name_here/payhere-python-sdk.git
+git clone https://github.com/your_name_here/visionpay-python-sdk.git
 ```
 
 3. Create a branch for local development:
@@ -96,7 +96,7 @@ git checkout -b name-of-your-bugfix-or-feature
 
 Now you can make your changes locally.
 
-4. When you're done making changes, run all the checks, doc builder and spell checker with `tox`. 
+4. When you're done making changes, run all the checks, doc builder and spell checker with `tox`.
 ```sh
 tox
 ```
@@ -117,10 +117,10 @@ git push origin name-of-your-bugfix-or-feature
 ### Make a Pull Request
 
 At this point, you should switch back to your master branch and make sure it's
-up to date with `payhere-python-sdk`'s master branch:
+up to date with `visionpay-python-sdk`'s master branch:
 
 ```sh
-git remote add upstream https://github.com/rileydigitalservices/payhere-python-sdk.git
+git remote add upstream https://github.com/visiongroup-uganda/visionpay-python-sdk.git
 git checkout master
 git pull upstream master
 ```
@@ -175,14 +175,14 @@ Maintainers need to do the following to push out a release:
 
   ```sh
   git checkout master
-  git fetch payhere-python-sdk
-  git rebase payhere-python-sdk/master
+  git fetch visionpay-python-sdk
+  git rebase visionpay-python-sdk/master
   # If the release is 2.1.x then this should be: 2-1-stable
   git checkout -b N-N-stable
-  git push payhere-python-sdk N-N-stable:N-N-stable
+  git push visionpay-python-sdk N-N-stable:N-N-stable
   ```
 
-Before you make a Pull Request, make sure of the following: 
+Before you make a Pull Request, make sure of the following:
 
 1. Make sure your tests pass. Run `tox` beforehand.
 2. Update documentation where necessary.

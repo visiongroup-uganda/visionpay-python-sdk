@@ -16,7 +16,7 @@ from requests.auth import AuthBase
 from requests.auth import HTTPBasicAuth
 
 
-from .config import PayhereConfig
+from .config import VisionpayConfig
 from .errors import APIError
 from .utils import requests_retry_session
 
@@ -40,15 +40,15 @@ class Client(ClientInterface):
         return super(Client, self).getTransactionStatus()
 
 
-class Payhere(ClientInterface, object):
+class Visionpay(ClientInterface, object):
 
     def __init__(
             self,
             config,
             ** kwargs):
-        super(Payhere, self).__init__(**kwargs)
+        super(Visionpay, self).__init__(**kwargs)
         self._session = Session()
-        self._config = PayhereConfig(config)
+        self._config = VisionpayConfig(config)
 
     @property
     def config(self):

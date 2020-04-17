@@ -4,4 +4,4 @@ Authors
 
 * Acellam Guy
 
-For [Riley Digital Services](http://rds.ug)
+For [Vision Group Uganda](https://visiongroup.co.ug/)

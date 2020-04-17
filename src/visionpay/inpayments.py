@@ -1,10 +1,10 @@
 import uuid
 
-from .client import Payhere
+from .client import Visionpay
 from .utils import validate_phone_number
 
 
-class Inpayments(Payhere, object):
+class Inpayments(Visionpay, object):
     def getTransactionStatus(
             self,
             transaction_id,
@@ -28,7 +28,7 @@ class Inpayments(Payhere, object):
             "amount": str(amount),
             "processingNumber": processing_number,
             "narration": narration}
-            
+
         url = "{0}/inpayments".format(super(Inpayments, self).config.baseUrl)
         self.request("POST", url, headers, data)
         return {"transaction_ref": ref}

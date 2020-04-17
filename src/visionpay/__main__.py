@@ -1,5 +1,5 @@
 """
-Entrypoint module, in case you use `python -payhere_python`.
+Entrypoint module, in case you use `python -visionpay_python`.
 
 
 Why does this file exist, and why __main__? For more info, read:
@@ -8,7 +8,7 @@ Why does this file exist, and why __main__? For more info, read:
 - https://docs.python.org/2/using/cmdline.html#cmdoption-m
 - https://docs.python.org/3/using/cmdline.html#cmdoption-m
 """
-from payhere.cli import main
+from visionpay.cli import main
 
 if __name__ == "__main__":
     main()

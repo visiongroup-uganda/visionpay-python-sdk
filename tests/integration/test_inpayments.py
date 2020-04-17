@@ -3,7 +3,7 @@ import re
 import os
 import pytest
 from click.testing import CliRunner
-from payhere.inpayments import Inpayments
+from visionpay.inpayments import Inpayments
 
 
 pytest.globalDict = {}
@@ -17,9 +17,9 @@ def test_inpayments():
 @given("I have a valid APP-ID, username and password")
 def user_credentials():
     config = {
-        "PAYHERE_APP_ID": os.environ.get("PAYHERE_APP_ID"),
-        "PAYHERE_USERNAME": os.environ.get("PAYHERE_USERNAME"),
-        "PAYHERE_PASSWORD": os.environ.get("PAYHERE_PASSWORD"),
+        "VISIONPAY_APP_ID": os.environ.get("VISIONPAY_APP_ID"),
+        "VISIONPAY_USERNAME": os.environ.get("VISIONPAY_USERNAME"),
+        "VISIONPAY_PASSWORD": os.environ.get("VISIONPAY_PASSWORD"),
     }
     client = Inpayments(config)
     pytest.globalDict["client"] = client

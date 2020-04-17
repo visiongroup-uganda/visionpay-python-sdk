@@ -1,9 +1,9 @@
 
 
-class PayhereError(Exception):
+class VisionpayError(Exception):
     def __init__(self, message=None, http_body=None, http_status=None,
                  json_body=None, headers=None, code=None):
-        super(PayhereError, self).__init__(message)
+        super(VisionpayError, self).__init__(message)
 
         if http_body and hasattr(http_body, 'decode'):
             try:
@@ -40,35 +40,35 @@ class PayhereError(Exception):
             self.request_id)
 
 
-class APIError(PayhereError):
+class APIError(VisionpayError):
     pass
 
 
-class APIConnectionError(PayhereError):
+class APIConnectionError(VisionpayError):
     pass
 
 
-class AuthenticationError(PayhereError):
+class AuthenticationError(VisionpayError):
     pass
 
 
-class PermissionError(PayhereError):
+class PermissionError(VisionpayError):
     pass
 
 
-class PreapprovalError(PayhereError):
+class PreapprovalError(VisionpayError):
     pass
 
 
-class RequestToPayError(PayhereError):
+class RequestToPayError(VisionpayError):
     pass
 
 
-class TransferError(PayhereError):
+class TransferError(VisionpayError):
     pass
 
 
-class GeneralError(PayhereError):
+class GeneralError(VisionpayError):
     pass
 
 
